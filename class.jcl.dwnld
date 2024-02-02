@@ -1,0 +1,90 @@
+1                         J E S 2  J O B  L O G  --  S Y S T E M  M V S 1  --  N O D E  N 1
+0
+ 10.21.01 JOB06777 ---- FRIDAY,    02 FEB 2024 ----
+ 10.21.01 JOB06777  IRR010I  USERID TRAIN05  IS ASSIGNED TO THIS JOB.
+ 10.21.01 JOB06777  ICH70001I TRAIN05  LAST ACCESS AT 10:18:39 ON FRIDAY, FEBRUARY 2, 2024
+ 10.21.01 JOB06777  $HASP373 TRAIN05I STARTED - INIT 1    - CLASS A        - SYS MVS1
+ 10.21.01 JOB06777  IEF403I TRAIN05I - STARTED - TIME=10.21.01
+ 10.21.02 JOB06777  -                                      ----TIMINGS (MINUTES)-----                          -----PAGING COUNTS----
+ 10.21.02 JOB06777  -STEPNAME PROCSTEP    RC   EXCP   CONN       TCB       SRB  CLOCK          SERV  WORKLOAD  PAGE  SWAP   VIO SWAPS
+ 10.21.02 JOB06777  -PTPCH                00     61      6  0.000348  0.000010    0.0           136  PRDBAT       0     0     0     0
+ 10.21.02 JOB06777  IEF404I TRAIN05I - ENDED - TIME=10.21.02
+ 10.21.02 JOB06777  -TRAIN05I ENDED.  NAME-MAINTEC              TOTAL TCB CPU TIME= 0.000348 TOTAL ELAPSED TIME=   0.0 SUBSYS=JES2
+ 10.21.02 JOB06777  $HASP395 TRAIN05I ENDED - RC=0000
+0------ JES2 JOB STATISTICS ------
+-  02 FEB 2024 JOB EXECUTION DATE
+-           17 CARDS READ
+-           93 SYSOUT PRINT RECORDS
+-            0 SYSOUT PUNCH RECORDS
+-           10 SYSOUT SPOOL KBYTES
+-         0.00 MINUTES EXECUTION TIME
+         1 //TRAIN05I JOB 43312,'MAINTEC',                                         JOB06777
+           //             CLASS=A,MSGCLASS=H,MSGLEVEL=(1,1),NOTIFY=&SYSUID         00020000
+           //*******************************************************               00030000
+           //*** I-P-O  I(NPUT)   P(ROCESS)   O(UTPUT)  ************               00040000
+           //*** I - LIBRARY                          **************               00050000
+           //*** P - PRINT ENTIRE LIBRARY FROM SYSUT1  TO  SYSUT2  *               00060000
+           //***     PO=LIBRARY (MAX)MEMBS 200 1 RECORD FIELDS STMT*               00070000
+           //*** O - SEND DATA TO "PRINT" / JES / ******************               00080000
+           //*******************************************************               00090000
+           IEFC653I SUBSTITUTION JCL - 43312,'MAINTEC',CLASS=A,MSGCLASS=H,MSGLEVEL=(1,1),NOTIFY=TRAIN05
+         2 //PTPCH EXEC  PGM=IEBPTPCH                                              00100000
+         3 //SYSPRINT DD  SYSOUT=*                                                 00110000
+         4 //SYSIN    DD  *                                                        00120000
+         5 //SYSUT2   DD  SYSOUT=*                                         OUTPUT  00150000
+           //******  PRINT UP TO 200 MEMBERS OF A PDS                              00160000
+         6 //SYSUT1  DD  DSN=TRAIN05.CLASS.JCL,DISP=SHR                     INPUT  00170002
+ ICH70001I TRAIN05  LAST ACCESS AT 10:18:39 ON FRIDAY, FEBRUARY 2, 2024
+ IEFA111I TRAIN05I IS USING THE FOLLOWING JOB RELATED SETTINGS:
+          SWA=BELOW,TIOT SIZE=32K,DSENQSHR=DISALLOW,GDGBIAS=JOB
+ IEF236I ALLOC. FOR TRAIN05I PTPCH
+ IEF237I JES2 ALLOCATED TO SYSPRINT
+ IEF237I JES2 ALLOCATED TO SYSIN
+ IEF237I JES2 ALLOCATED TO SYSUT2
+ IEF237I 30B3 ALLOCATED TO SYSUT1
+ IEF142I TRAIN05I PTPCH - STEP WAS EXECUTED - COND CODE 0000
+ IEF285I   TRAIN05.TRAIN05I.JOB06777.D0000102.?         SYSOUT
+ IEF285I   TRAIN05.TRAIN05I.JOB06777.D0000101.?         SYSIN
+ IEF285I   TRAIN05.TRAIN05I.JOB06777.D0000103.?         SYSOUT
+ IEF285I   TRAIN05.CLASS.JCL                            KEPT
+ IEF285I   VOL SER NOS= USER01.
+ IEF373I STEP/PTPCH   /START 2024033.1021
+ IEF032I STEP/PTPCH   /STOP  2024033.1021
+         CPU:     0 HR  00 MIN  00.02 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+         VIRT:    68K  SYS:   252K  EXT:        0K  SYS:    12776K
+         ATB- REAL:                  1056K  SLOTS:                     0K
+              VIRT- ALLOC:      13M SHRD:       0M
+ IEF375I  JOB/TRAIN05I/START 2024033.1021
+ IEF033I  JOB/TRAIN05I/STOP  2024033.1021
+         CPU:     0 HR  00 MIN  00.02 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+1
+-PRINT/PUNCH DATA SET UTILITY                                                                      PAGE 0001
+   PRINT TYPORG=PO,MAXNAME=200,MAXFLDS=1                                 00130000
+   RECORD FIELD=(80)                                                     00140000
+  EOF ON SYSIN
+  END OF DATA FOR SDS OR MEMBER
+  END OF DATA FOR SDS OR MEMBER
+1                                                                                                              PAGE 0001
+ MEMBER NAME  JOBSTMT
+ //TRAIN001 JOB 43312,'MAINTEC',                                         00010005
+ //             CLASS=A,MSGCLASS=H,MSGLEVEL=(1,1),NOTIFY=&SYSUID         00020003
+1                                                                                                              PAGE 0002
+ MEMBER NAME  PTPCH2
+ //TRAIN05I JOB 43312,'MAINTEC',                                         00010001
+ //             CLASS=A,MSGCLASS=H,MSGLEVEL=(1,1),NOTIFY=&SYSUID         00020000
+ //*******************************************************               00030000
+ //*** I-P-O  I(NPUT)   P(ROCESS)   O(UTPUT)  ************               00040000
+ //*** I - LIBRARY                          **************               00050000
+ //*** P - PRINT ENTIRE LIBRARY FROM SYSUT1  TO  SYSUT2  *               00060000
+ //***     PO=LIBRARY (MAX)MEMBS 200 1 RECORD FIELDS STMT*               00070000
+ //*** O - SEND DATA TO "PRINT" / JES / ******************               00080000
+ //*******************************************************               00090000
+ //PTPCH EXEC  PGM=IEBPTPCH                                              00100000
+ //SYSPRINT DD  SYSOUT=*                                                 00110000
+ //SYSIN    DD  *                                                        00120000
+   PRINT TYPORG=PO,MAXNAME=200,MAXFLDS=1                                 00130000
+   RECORD FIELD=(80)                                                     00140000
+ //SYSUT2   DD  SYSOUT=*                                         OUTPUT  00150000
+ //******  PRINT UP TO 200 MEMBERS OF A PDS                              00160000
+ //SYSUT1  DD  DSN=TRAIN05.CLASS.JCL,DISP=SHR                     INPUT  00170002
+
